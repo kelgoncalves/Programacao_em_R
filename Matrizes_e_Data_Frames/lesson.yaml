@@ -88,15 +88,15 @@
   Hint: O comando ?matrix vai fazer a mágica.
 
 - Class: cmd_question
-  Output: Agora, olhe a documentação para a função matrix() e veja se você consegue entender como criar uma matriz contendo os mesmos números (1-20) e dimensões (4 linhas, 5 colunas) chamando a função matrix(). Guarde o resultado em uma variável chamada minha_matriz2.
-  CorrectAnswer: minha_matriz2 <- matrix(1:20, nrow=4, ncol=5)
-  AnswerTests: calculates_same_value('matrix(1:20, nrow=4, ncol=5)'); expr_creates_var('minha_matriz2')
-  Hint: Chame a função matrix() com três argumentos – 1:20, o número de linhas e o número de colunas. Cuide para especificar arguemntos com seus nomes corretos e armazenar o resultado em minha_matriz2 (não minha_matriz).
+  Output: Agora, olhe a documentação para a função matrix() e veja se você consegue entender como criar uma matriz contendo os mesmos números (1-20) e dimensões (4 linhas, 5 colunas) chamando a função matrix(). Guarde o resultado em uma variável chamada outra_matriz.
+  CorrectAnswer: outra_matriz <- matrix(1:20, nrow=4, ncol=5)
+  AnswerTests: calculates_same_value('matrix(1:20, nrow=4, ncol=5)'); expr_creates_var('outra_matriz')
+  Hint: Chame a função matrix() com três argumentos – 1:20, o número de linhas e o número de colunas. Cuide para especificar arguemntos com seus nomes corretos e armazenar o resultado em outra_matriz (não minha_matriz).
 
 - Class: cmd_question
-  Output: Finalmente, vamos confirmar que minha_matriz e minha_matriz2 são realmente idênticas. A função identical() vai nos dizer se os dois primeiros argumentos são os mesmos. Tente usar ela.
-  CorrectAnswer: identical(minha_matriz, minha_matriz2)
-  AnswerTests: any_of_exprs('identical(minha_matriz, minha_matriz2)', 'identical(minha_matriz2, minha_matriz)')
+  Output: Finalmente, vamos confirmar que minha_matriz e outra_matriz são realmente idênticas. A função identical() vai nos dizer se os dois primeiros argumentos são os mesmos. Tente usar ela.
+  CorrectAnswer: identical(minha_matriz, outra_matriz)
+  AnswerTests: any_of_exprs('identical(minha_matriz, outra_matriz)', 'identical(outra_matriz, minha_matriz)')
   Hint: Se não tiver certeza de o que fazer, leia a documentação para identical() usando a função `?`.
 
 - Class: text
