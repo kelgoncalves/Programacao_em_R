@@ -1,7 +1,7 @@
 - Class: meta
   Course: R Programming
-  Lesson: Subsetting Vectors
-  Author: Nick Carchedi
+  Lesson: Subconjuntos de Vetores
+  Author: Nick Carchedi, Sheyla Trefflich (tradução)
   Type: Standard
   Organization: JHU Biostat
   Version: 2.2.0
@@ -32,13 +32,11 @@
 
 - Class: text
   Output: Vamos começar com o vetores lógicos. Um cenário comum quando trabalhamos com dados do mundo real é que nós queremos extrair todos os elementos do vetor que não sejam N.A. (ex: dados perdidos). Lembre-se de que is.na(x) produz um vetor de valores lógicos com o mesmo tamanho de x, com TRUEs correspondendo a valores NA em x e FALSEs correspondendo a valores não NA em x.
- 
- 
- 
+  
 - Class: mult_question
   Output: O que você imagina que x[is.na(x)] retorne?
-  AnswerChoices: Um vetor com todos os NAs; Um vetor sem NAs, Um vetor de TRUEs e FALSEs; Um vetor de tamanho 0
-  CorrectAnswer: Um vetor com todos os NAs
+  AnswerChoices: Um vetor com todos os NAs; Um vetor sem NAs; Um vetor de TRUEs e FALSEs; Um vetor de tamanho 0
+  CorrectAnswer: Um vetor com todos os NAs.
   AnswerTests: omnitest(correctVal="A vector of all NAs")
   Hint: Lembre-se que is.na(x) retorna em qual posição NA se encontra dentro do vetor. Então se estabelecermos um subconjunto de x, o que você espera que aconteça?
 
@@ -64,144 +62,144 @@
   Output: Agora que nós isolamos os valores não perdidos de x e colocamos dentro da variável y, nós podemos criar os subconjuntos que quisermos.
 
 - Class: mult_question
-  Output: Recall that the expression y > 0 will give us a vector of logical values the same length as y, with TRUEs corresponding to values of y that are greater than zero and FALSEs corresponding to values of y that are less than or equal to zero. What do you think y[y > 0] will give you?
-  AnswerChoices: A vector of all the positive elements of y; A vector of all the negative elements of y; A vector of all NAs; A vector of length 0; A vector of TRUEs and FALSEs
-  CorrectAnswer: A vector of all the positive elements of y
+  Output: Lembre-se que a expressão y > 0 vai retornar um valor lógico de mesmo tamanho que y, com TRUEs correspondentes aos valores que em y são maiores que zero e FALSEs correspondentes aos valores de y que são menores ou igauis a zero. O que você acha que y[y > 0] vai retornar?
+  AnswerChoices: Um vetor com todos os elementos positivos de y; Um vetor com todos os elementos negativos de y; Um vetor com todos os NAs; Um vetor de tamanho 0; Um vetor de TRUEs e FALSEs
+  CorrectAnswer: Um vetor com todos os elementos positivos de y
   AnswerTests: omnitest(correctVal="A vector of all the positive elements of y")
-  Hint: The logical expression y > 0 will give us TRUE for each element of y that is positive. Based on that, what do you think y[y > 0] will return?
-
+  Hint: A expressão lógica de y > 0 vai retornar TRUE para cada elemento de y que for positivo. Sendo assim, o que você acha que y[y > 0] vai retornar?
+  
 - Class: cmd_question
-  Output: Type y[y > 0] to see that we get all of the positive elements of y, which are also the positive elements of our original vector x.
+  Output: Digite [y > 0] para ver que nós teremos todos os elementos positivos de y, que são também os elementos positivos do nosso vetor original x.
   CorrectAnswer: y[y > 0]
   AnswerTests: omnitest(correctExpr='y[y > 0]')
-  Hint: Type y[y > 0] to view only the positive elements of y.
-
-- Class: cmd_question
-  Output: You might wonder why we didn't just start with x[x > 0] to isolate the positive elements of x. Try that now to see why.
+  Hint: Digite y[y > 0] para visualizar somente os elementos de y.
+  
+- Class: cmd_questione
+  Output: Você pode se perguntar porque nós não começamos apenas com x[x > 0] para isolar os elementos positivos de x. Tente para ver por quê.
   CorrectAnswer: x[x > 0]
   AnswerTests: omnitest(correctExpr='x[x > 0]')
-  Hint: Try x[x > 0] to see why we didn't use this approach.
-
+  Hint: Digite x[x > 0] para ver porque não utilizamos essa abordagem.
+ 
 - Class: text
-  Output: Since NA is not a value, but rather a placeholder for an unknown quantity, the expression NA > 0 evaluates to NA. Hence we get a bunch of NAs mixed in with our positive numbers when we do this.
+  Output: Como NA não é um valor, mas sim um espaço reservado para uma quantidade desconhecida, a expressão NA > 0 avalia para NA. Por isso, conseguimos um monte de NAs misturados com nossos números positivos quando fazemos isso.
 
 - Class: cmd_question
-  Output: Combining our knowledge of logical operators with our new knowledge of subsetting, we could do this -- x[!is.na(x) & x > 0]. Try it out.
+  Output: Combinando o nosso conhecimento de operadores lógicos com o de subconjuntos, nós podemos fazer assim -- x[!is.na(x) & x > 0]. Tente.
   CorrectAnswer: x[!is.na(x) & x > 0]
   AnswerTests: omnitest(correctExpr='x[!is.na(x) & x > 0]')
-  Hint: Try x[!is.na(x) & x > 0] to see what you get.
+  Hint: Digite x[!is.na(x) & x > 0] para ver o que retorna.
 
 - Class: text
-  Output: In this case, we request only values of x that are both non-missing AND greater than zero.
+  Output: Nesse caso, nós solicitamos apenas os valores de x que são ao mesmo tempo não perdidos E maiores que zero.
 
 - Class: text
-  Output: I've already shown you how to subset just the first ten values of x using x[1:10]. In this case, we're providing a vector of positive integers inside of the square brackets, which tells R to return only the elements of x numbered 1 through 10.
+  Output: Nós já mostramos para você como construir um subconjunto apenas com os primeiros dez elementos x[1:10]. Nesse caso, nós estamos providenciando um vetor de elementos positivos inteiros dentro dos colchetes, que informa ao R para retornar apenas os elementos de x numerados de 1 a 10.  
 
 - Class: text
-  Output: Many programming languages use what's called 'zero-based indexing', which means that the first element of a vector is considered element 0. R uses 'one-based indexing', which (you guessed it!) means the first element of a vector is considered element 1.
+  Output: Muitas linguagens de programação usam o que chamamos de 'indexação baseada em zero', que significa que o primeiro elememento de um vetor é considerado elemento 0. O R utiliza a 'indexação baseada em zero', que (você adivinhou!) significa que o primeiro elemento de um vetor é considerado 1.
 
 - Class: cmd_question
-  Output: Can you figure out how we'd subset the 3rd, 5th, and 7th elements of x? Hint -- Use the c() function to specify the element numbers as a numeric vector.
+  Output: Você consegue imaginar como seria um subconjunto com o 3º, o 5º e o 7º elementos de x? Sugestão -- Use a função c() para especificar o número de elementos do vetor numérico.
   CorrectAnswer: x[c(3, 5, 7)]
   AnswerTests: omnitest(correctExpr='x[c(3, 5, 7)]')
-  Hint: Create a vector of indexes with c(3, 5, 7), then put that inside of the square brackets.
+  Hint: Crie um vetor com a indexação de c(3, 5, 7), e então coloque-o entre colchetes.
 
 - Class: cmd_question
-  Output: It's important that when using integer vectors to subset our vector x, we stick with the set of indexes {1, 2, ..., 40} since x only has 40 elements. What happens if we ask for the zeroth element of x (i.e. x[0])? Give it a try.
+  Output: É importante que quando utilizar valores inteiros no subconjunto do nosso vetor x, Nós ficamos com conjuntos de índices {1, 2, ..., 40} desde que x tenha somente 40 elementos. O que acontece se nós perguntarmos para o elemento na posição 0 de x (por exemplo x[0])? Tente para ver.
   CorrectAnswer: x[0]
   AnswerTests: omnitest(correctExpr='x[0]')
-  Hint: Try x[0] to see what happens when we refer to the zeroth element of a vector, which is not defined in R.
+  Hint: Digite x[0] para ver o que aocntece quando nós nos referimos ao elemento na posição zero do vetor, como não é determinado em R.
 
 - Class: cmd_question
-  Output: As you might expect, we get nothing useful. Unfortunately, R doesn't prevent us from doing this. What if we ask for the 3000th element of x? Try it out.
+  Output: Como você deve estar esperando, não retorna nada útil. Infelizmente, o R não prevê essa utilização. E se pedirmos o 3000º elemento de x? Tente.
   CorrectAnswer: x[3000]
   AnswerTests: omnitest(correctExpr='x[3000]')
-  Hint: Request the 3000th element of x (which does not exist) with x[3000].
+  Hint: Pergunte sobre o 3000º elemento de x (que não existe) com x[3000].
+ 
+- Class: text
+  Output: Mais uma vez, nada útil é retornado, mas o R não nos impede de pedir isso. Você deve certificar-se de que o que você está pedindo está dentro dos limites do vetor com o qual você está trabalhando.
 
 - Class: text
-  Output: Again, nothing useful, but R doesn't prevent us from asking for it. This should be a cautionary tale. You should always make sure that what you are asking for is within the bounds of the vector you're working with.
-
-- Class: text
-  Output: What if we're interested in all elements of x EXCEPT the 2nd and 10th? It would be pretty tedious to construct a vector containing all numbers 1 through 40 EXCEPT 2 and 10.
+  Output: E se nos interessarmos por todos os elementos de x exceto o 2º e o 10º? Seria bastante tedioso construir um vetor contendo todos os números de 1 a 40, EXCETO 2 e 10.
 
 - Class: cmd_question
-  Output: Luckily, R accepts negative integer indexes. Whereas x[c(2, 10)] gives us ONLY the 2nd and 10th elements of x, x[c(-2, -10)] gives us all elements of x EXCEPT for the 2nd and 10 elements.  Try x[c(-2, -10)] now to see this.
+  Output: Felizmente o R aceita a indexação de inteiros negativos. Enquanto que x[c(2, 10)] nos retorna apenas o 2º e o 10º elementos de x, x[c(-2, -10)]retornará todos os elementos de x EXCETO o 2º e o 10º elementos. Tente x[c(-2, -10)] agora para ver.
   CorrectAnswer: x[c(-2, -10)]
   AnswerTests: omnitest(correctExpr='x[c(-2, -10)]')
-  Hint: Give x[c(-2, -10)] a try.
+  Hint: Ofereça x[c(-2, -10)] como um teste.
 
 - Class: cmd_question
-  Output: A shorthand way of specifying multiple negative numbers is to put the negative sign out in front of the vector of positive numbers. Type x[-c(2, 10)] to get the exact same result.
+  Output: uma maneira abreviada de especificar multiplos números negativos é colocar o sinal negativo na frente do número positivo do vetor. Digite x[-c(2, 10)] para retornar exatamente o mesmo resultado. 
   CorrectAnswer: x[-c(2, 10)]
   AnswerTests: omnitest(correctExpr='x[-c(2, 10)]')
-  Hint: Use x[-c(2, 10)] to simply things a bit. This could be a time saver if specifying many negative indexes.
+  Hint: Use x[-c(2, 10)] para simplificar as coisas um pouco. Isso pode economizar tempo se for necessŕio especificar muitos índices negativos.
 
 - Class: text
-  Output: So far, we've covered three types of index vectors -- logical, positive integer, and negative integer. The only remaining type requires us to introduce the concept of 'named' elements.
+  Output: Até agora, abordamos três tipos de vetores de índice: inteiro lógico, positivo e número inteiro negativo. O único tipo restante nos obriga a introduzir o conceito de elementos "nomeados".
 
 - Class: cmd_question
-  Output: Create a numeric vector with three named elements using vect <- c(foo = 11, bar = 2, norf = NA).
+  Output: Cire um vetor numérico com três elementos nomeados usando vect <- c(foo = 11, bar = 2, norf = NA).
   CorrectAnswer: vect <- c(foo = 11, bar = 2, norf = NA)
   AnswerTests: omnitest(correctExpr='vect <- c(foo = 11, bar = 2, norf = NA)')
-  Hint: Create a named vector with vect <- c(foo = 11, bar = 2, norf = NA).
+  Hint: Crie um vetor nomeado com vect <- c(foo = 11, bar = 2, norf = NA).
 
 - Class: cmd_question
-  Output: When we print vect to the console, you'll see that each element has a name. Try it out.
+  Output: quanto digita vect no console, você verá que cada elemento tem o mesmo nome. Tente.
   CorrectAnswer: vect
   AnswerTests: omnitest(correctExpr='vect')
-  Hint: Type vect to view its contents.
+  Hint: Digite vect para ver seu conteúdo.
 
 - Class: cmd_question
-  Output: We can also get the names of vect by passing vect as an argument to the names() function. Give that a try.
+  Output: Nós também podemos conseguir os nomes de vect passando vect como um argumento da função names(). Digite para ver.
   CorrectAnswer: names(vect)
   AnswerTests: omnitest(correctExpr='names(vect)')
-  Hint: Check out the results of names(vect).
+  Hint: Confira o resultado de names(vect).
 
 - Class: cmd_question
-  Output: Alternatively, we can create an unnamed vector vect2 with c(11, 2, NA). Do that now.
+  Output: Alternativamente, nós podemos criar um vetor vect2 com c(11, 2, NA). Faça isso agora.
   CorrectAnswer: vect2 <- c(11, 2, NA)
   AnswerTests: omnitest(correctExpr='vect2 <- c(11, 2, NA)')
-  Hint: Create an ordinary (unnamed) vector called vect2 that contains c(11, 2, NA).
+  Hint: Crie um vetor (não nomeado) chamado vect2 que contém c(11, 2, NA).
 
 - Class: cmd_question
-  Output: Then, we can add the `names` attribute to vect2 after the fact with names(vect2) <- c("foo", "bar", "norf"). Go ahead.
+  Output: Então nós podemos adicionar com os `nomes` atributo `names` em vect2, dessa maneira names(vect2) <- c("foo", "bar", "norf"). Vá em frente.
   CorrectAnswer: names(vect2) <- c("foo", "bar", "norf")
   AnswerTests: omnitest(correctExpr='names(vect2) <- c("foo", "bar", "norf")')
-  Hint: Add names to vect2 with names(vect2) <- c("foo", "bar", "norf").
+  Hint: Adicione nomes ao vect2 com names(vect2) <- c("foo", "bar", "norf").
 
 - Class: cmd_question
-  Output: Now, let's check that vect and vect2 are the same by passing them as arguments to the identical() function.
+  Output: Agora, vamos checar se vect e vect2 são iguais utilizando-os como argumento da função identical().
   CorrectAnswer: identical(vect, vect2)
   AnswerTests: any_of_exprs('identical(vect, vect2)', 'identical(vect2, vect)')
-  Hint: The identical() function tells us if its first two arguments are, well, identical.
+  Hint: A função identical() vai nos mostrar se os dois argumento são identicos.
 
 - Class: text
-  Output: Indeed, vect and vect2 are identical named vectors.
-
+  Output: De fato, vect e vect2 são vetores nomeados identicos.
+ 
 - Class: mult_question
-  Output: Now, back to the matter of subsetting a vector by named elements. Which of the following commands do you think would give us the second element of vect?
+  Output: Agora, de volta ao assunto de subconjunto de um vetor por elementos nomeados. Qual dos seguintes comando você acha que vai retornar o segunto elemento de vect?
   AnswerChoices: vect["bar"]; vect[bar]; vect["2"]
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctVal='vect["bar"]')
-  Hint: If we want the element named "bar" (i.e. the second element of vect), which command would get us that?
-
+  Hint: Se nós queremos o elemento nomeado "bar" (ou seja, o segundo elemento de vect), qual o comando nos retornaria isso? 
+  
 - Class: cmd_question
-  Output: Now, try it out.
+  Output: Agora tente isso.
   CorrectAnswer: vect["bar"]
   AnswerTests: omnitest(correctExpr='vect["bar"]')
-  Hint: Try vect["bar"].
+  Hint: Tente vect["bar"].
 
 - Class: cmd_question
-  Output: Likewise, we can specify a vector of names with vect[c("foo", "bar")]. Try it out.
+  Output: Da mesma meneira, podemos especificar um vetor de nomes com vect [c ("foo", "bar")]. Experimente.
   CorrectAnswer: vect[c("foo", "bar")]
   AnswerTests: omnitest(correctExpr='vect[c("foo", "bar")]')
-  Hint: Use vect[c("foo", "bar")] to get only the elements of vect named "foo" and "bar".
+  Hint: Use vect[c("foo", "bar")] para retornar apenas elementos de vect nomeados como "foo" e "bar".
 
 - Class: text
-  Output: Now you know all four methods of subsetting data from vectors. Different approaches are best in different scenarios and when in doubt, try it out!
+  Output: Agora você conhece todos os quatro métodos de subconjuntos de dados de vetores. Abordagens diferentes são melhores em cenários diferentes e em caso de dúvidas, experimente!
 
 - Class: mult_question
-  Output: Would you like to inform someone about your successful completion of this lesson?
+  Output: Você gostaria de informar alguém sobre a conclusão dessa aula com sucesso?
   CorrectAnswer: NULL
   AnswerChoices: Yes; No
   AnswerTests: notify()
