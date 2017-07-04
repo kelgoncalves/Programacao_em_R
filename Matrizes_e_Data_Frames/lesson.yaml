@@ -100,7 +100,7 @@
   Hint: Se não tiver certeza de o que fazer, leia a documentação para identical() usando a função `?`.
 
 - Class: text
-  Output: Agora, iamgine que os números na nossa tabela representam medidas de um experimento clínico, onde cada linha é um paciente e cada coluna representa uma variável para qual medidas foram tiradas.
+  Output: Agora, imagine que os números na nossa tabela representam medidas de um experimento clínico, onde cada linha é um paciente e cada coluna representa uma variável para qual medidas foram tiradas.
 
 - Class: text
   Output: Nós podemos querer nomear nossas linhas para sabermos qual número pertence a qual paciente no experimento. Uma forma de fazer isso é adicionar uma coluna à matriz, que contém os nomes das quatro pessoas.
