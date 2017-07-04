@@ -157,9 +157,9 @@
   Output: Entretanto, já que já resolvemos esse problema, vamos resolver um problema diferente determinando nomes para as colunas de nosso data frame para sabermos que tipo de medida cada coluna representa.
 
 - Class: cmd_question
-  Output: Já que temos seis colunas (incluindo nomes de pacientes), vamos precisar primeiro criar um vetor contendo um elemento para cada coluna. Crie um vetor de caracteres chamado cnomes que contém os seguintes valores (em ordem) -- “paciente”, “idade”, “peso”, “pressão”, “avaliação” e “teste”.
-  CorrectAnswer: cnomes <- c(“paciente”, “idade”, “peso”, “pressão”, “avaliação”, “teste”)
-  AnswerTests: omnitest(correctExpr='cnomes <-c(“paciente”, “idade”, “peso”, “pressão”, “avaliação”, “teste”)')
+  Output: Já que temos seis colunas (incluindo nomes de pacientes), vamos precisar primeiro criar um vetor contendo um elemento para cada coluna. Crie um vetor de caracteres chamado cnomes que contém os seguintes valores (em ordem) -- "paciente", "idade", "peso", "pressão", "avaliação" e "teste"
+  CorrectAnswer: cnomes <-c("paciente", "idade", "peso", "pressão", "avaliação", "teste")
+  AnswerTests: omnitest(correctExpr='cnomes <-c("paciente", "idade", "peso", "pressão", "avaliação", "teste")')
   Hint: Certifique-se que os nomes estão todos em letra minúscula, entre aspas, separados com vírgulas. Não esqueça de usar a função c().
 
 - Class: cmd_question
