@@ -146,7 +146,7 @@
   Output: Mas é muito importante saber como estes parâmetros funcionam, uma vez que estes novos pacotes foram modelados com base no funcionamento dos gráficos básicos.
 
 - Class: text
-  Output: Vamos ver novas funções de gráficos, os boxplots. Para isso, precisamos carregar um novo conjunto de dados um pouco maior que o anrterior: o mtcars, que contém 11 medições para 32 carros.
+  Output: 'Vamos ver novas funções de gráficos, os boxplots. Para isso, precisamos carregar um novo conjunto de dados um pouco maior que o anrterior: o mtcars, que contém 11 medições para 32 carros.'
 
 - Class: cmd_question
   Output: Carregue o dataset com a função data() 
