@@ -135,7 +135,7 @@
   Hint: Use x[-c(2, 10)] para simplificar as coisas um pouco. Isso pode economizar tempo se for necessŕio especificar muitos índices negativos.
 
 - Class: text
-  Output: Até agora, abordamos três tipos de vetores de índice: inteiro lógico, positivo e número inteiro negativo. O único tipo restante nos obriga a introduzir o conceito de elementos "nomeados".
+  Output: 'Até agora, abordamos três tipos de vetores de índice: inteiro lógico, positivo e número inteiro negativo. O único tipo restante nos obriga a introduzir o conceito de elementos "nomeados".'
 
 - Class: cmd_question
   Output: Cire um vetor numérico com três elementos nomeados usando vect <- c(foo = 11, bar = 2, norf = NA).
