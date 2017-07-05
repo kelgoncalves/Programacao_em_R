@@ -31,7 +31,7 @@
   Output: Vetor de índice são retornados de quatro maneiras diferentes -- vetores lógicos, vetores de valores inteiros positivos, vetores de valores inteiros negativos e vetores de palavras -- todos esses abordados nesta lição.
 
 - Class: text
-  Output: Vamos começar com o vetores lógicos. Um cenário comum quando trabalhamos com dados do mundo real é que nós queremos extrair todos os elementos do vetor que não sejam N.A. (ex: dados perdidos). Lembre-se de que is.na(x) produz um vetor de valores lógicos com o mesmo tamanho de x, com TRUEs correspondendo a valores NA em x e FALSEs correspondendo a valores não NA em x.
+  Output: 'Vamos começar com o vetores lógicos. Um cenário comum quando trabalhamos com dados do mundo real é que nós queremos extrair todos os elementos do vetor que não sejam N.A. (ex: dados perdidos). Lembre-se de que is.na(x) produz um vetor de valores lógicos com o mesmo tamanho de x, com TRUEs correspondendo a valores NA em x e FALSEs correspondendo a valores não NA em x.'
   
 - Class: mult_question
   Output: O que você imagina que x[is.na(x)] retorne?
