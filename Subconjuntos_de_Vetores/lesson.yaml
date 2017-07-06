@@ -62,19 +62,19 @@
   Output: Agora que nós isolamos os valores não perdidos de x e colocamos dentro da variável y, nós podemos criar os subconjuntos que quisermos.
 
 - Class: mult_question
-  Output: Lembre-se que a expressão y > 0 vai retornar um valor lógico de mesmo tamanho que y, com TRUEs correspondentes aos valores que em y são maiores que zero e FALSEs correspondentes aos valores de y que são menores ou igauis a zero. O que você acha que y[y > 0] vai retornar?
+  Output: Lembre-se que a expressão y > 0 vai retornar um valor lógico de mesmo tamanho que y, com TRUEs correspondentes aos valores que em y são maiores que zero e FALSEs correspondentes aos valores de y que são menores ou iguais a zero. O que você acha que y[y > 0] vai retornar?
   AnswerChoices: Um vetor com todos os elementos positivos de y; Um vetor com todos os elementos negativos de y; Um vetor com todos os NAs; Um vetor de tamanho 0; Um vetor de TRUEs e FALSEs
   CorrectAnswer: Um vetor com todos os elementos positivos de y
   AnswerTests: omnitest(correctVal="Um vetor com todos os elementos positivos de y")
   Hint: A expressão lógica de y > 0 vai retornar TRUE para cada elemento de y que for positivo. Sendo assim, o que você acha que y[y > 0] vai retornar?
   
 - Class: cmd_question
-  Output: Digite [y > 0] para ver que nós teremos todos os elementos positivos de y, que são também os elementos positivos do nosso vetor original x.
+  Output: Digite y[y > 0] para ver que nós teremos todos os elementos positivos de y, que são também os elementos positivos do nosso vetor original x.
   CorrectAnswer: y[y > 0]
   AnswerTests: omnitest(correctExpr='y[y > 0]')
   Hint: Digite y[y > 0] para visualizar somente os elementos de y.
   
-- Class: cmd_questione
+- Class: cmd_question
   Output: Você pode se perguntar porque nós não começamos apenas com x[x > 0] para isolar os elementos positivos de x. Tente para ver por quê.
   CorrectAnswer: x[x > 0]
   AnswerTests: omnitest(correctExpr='x[x > 0]')
