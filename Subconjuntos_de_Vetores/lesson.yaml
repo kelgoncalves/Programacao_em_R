@@ -37,7 +37,7 @@
   Output: O que você imagina que x[is.na(x)] retorne?
   AnswerChoices: Um vetor com todos os NAs; Um vetor sem NAs; Um vetor de TRUEs e FALSEs; Um vetor de tamanho 0
   CorrectAnswer: Um vetor com todos os NAs.
-  AnswerTests: omnitest(correctVal="A vector of all NAs")
+  AnswerTests: omnitest(correctVal="Um vetor com todos os NAs")
   Hint: Lembre-se que is.na(x) retorna em qual posição NA se encontra dentro do vetor. Então se estabelecermos um subconjunto de x, o que você espera que aconteça?
 
 - Class: cmd_question
@@ -65,7 +65,7 @@
   Output: Lembre-se que a expressão y > 0 vai retornar um valor lógico de mesmo tamanho que y, com TRUEs correspondentes aos valores que em y são maiores que zero e FALSEs correspondentes aos valores de y que são menores ou igauis a zero. O que você acha que y[y > 0] vai retornar?
   AnswerChoices: Um vetor com todos os elementos positivos de y; Um vetor com todos os elementos negativos de y; Um vetor com todos os NAs; Um vetor de tamanho 0; Um vetor de TRUEs e FALSEs
   CorrectAnswer: Um vetor com todos os elementos positivos de y
-  AnswerTests: omnitest(correctVal="A vector of all the positive elements of y")
+  AnswerTests: omnitest(correctVal="Um vetor com todos os elementos positivos de y")
   Hint: A expressão lógica de y > 0 vai retornar TRUE para cada elemento de y que for positivo. Sendo assim, o que você acha que y[y > 0] vai retornar?
   
 - Class: cmd_question
@@ -138,13 +138,13 @@
   Output: 'Até agora, abordamos três tipos de vetores de índice: inteiro lógico, positivo e número inteiro negativo. O único tipo restante nos obriga a introduzir o conceito de elementos "nomeados".'
 
 - Class: cmd_question
-  Output: Cire um vetor numérico com três elementos nomeados usando vect <- c(foo = 11, bar = 2, norf = NA).
+  Output: Crie um vetor numérico com três elementos nomeados usando vect <- c(foo = 11, bar = 2, norf = NA).
   CorrectAnswer: vect <- c(foo = 11, bar = 2, norf = NA)
   AnswerTests: omnitest(correctExpr='vect <- c(foo = 11, bar = 2, norf = NA)')
   Hint: Crie um vetor nomeado com vect <- c(foo = 11, bar = 2, norf = NA).
 
 - Class: cmd_question
-  Output: quanto digita vect no console, você verá que cada elemento tem o mesmo nome. Tente.
+  Output: Quanto digita vect no console, você verá que cada elemento tem o mesmo nome. Tente.
   CorrectAnswer: vect
   AnswerTests: omnitest(correctExpr='vect')
   Hint: Digite vect para ver seu conteúdo.
