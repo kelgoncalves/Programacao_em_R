@@ -201,6 +201,6 @@
 - Class: mult_question
   Output: Você gostaria de informar alguém sobre a conclusão dessa aula com sucesso?
   CorrectAnswer: NULL
-  AnswerChoices: Yes; No
+  AnswerChoices: Sim; Não
   AnswerTests: notify()
   Hint: NULL
