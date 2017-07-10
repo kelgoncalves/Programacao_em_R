@@ -91,7 +91,7 @@
 - Class: cmd_question
   Output: Repita o comando mantendo o nome do eixo x, mas inserindo o nome "Distância (ft)" para como nome do eixo y com ylab = "nome_do_eixoY". 
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)")
-  AnswerTests: omnitest(any_of_exprs('plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)")', 'plot(x = cars$speed, y = cars$dist, ylab = "Distância (ft)", xlab = "Velocidade (mph)")'))
+  AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)")')
   Hint: Digite plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)") para criar o plot.
 
 - Class: text
