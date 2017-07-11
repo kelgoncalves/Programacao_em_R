@@ -98,7 +98,7 @@
   Output: Também é interessante colocar um título no gráfico, a fim de deixá-lo mais didático.
 
 - Class: cmd_question
-  Output: Faça o gráfico conforme foi feito acima e ao final dos argumentos, coloque o título "Velocidade do Carro vs Distância de Freagem". O argumento para adicionar títulos é main = "título".
+  Output: Faça o gráfico conforme foi feito acima e ao final dos argumentos, coloque o título "Velocidade do Carro vs Distância de Frenagem". O argumento para adicionar títulos é main = "título".
   CorrectAnswer: plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)", main = "Velocidade do Carro vs Distância de Freagem")
   AnswerTests: omnitest(correctExpr='plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)", main = "Velocidade do Carro vs Distância de Freagem")')
   Hint: Digite plot(x = cars$speed, y = cars$dist, xlab = "Velocidade (mph)", ylab = "Distância (ft)", main = "Velocidade do Carro vs Distância de Freagem") para criar o plot.
