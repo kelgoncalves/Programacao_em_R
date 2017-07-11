@@ -121,7 +121,7 @@
   Output: Algo está estranho no nosso resultado! Parece que combinar o nosso vetor de caracteres com nossa matriz de números fez com que tudo ficasse entre aspas. Isso significa que temos uma matriz de caracteres, que não é o que queremos.
 
 - Class: text
-  Output: Se você se lembrar do início desta lição, contei para você que matrizes podem conter apenas UMA classe de dados. Portanto, quando tentamos combinar um vetor de caracteres com uma matriz númerica, o R 'coagiu' números para caracteres, por isso as aspas.
+  Output: Se você se lembrar do início desta lição, contei para você que matrizes podem conter apenas UMA classe de dados. Portanto, quando tentamos combinar um vetor de caracteres com uma matriz numérica, o R 'coagiu' números para caracteres, por isso as aspas.
 
 - Class: text
   Output: Isso é chamado de 'coerção implícita', porque você não pediu para isso acontecer. Só aconteceu. Mas por que o R não converteu os nomes dos nossos pacientes para números? Deixarei você ponderar a resposta sozinho.
