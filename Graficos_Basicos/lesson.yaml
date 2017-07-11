@@ -76,7 +76,7 @@
   Output: Observe que este resultado é diferente do obtido por plot(cars). Neste caso, além de termos trocado a ordem dos eixos, o R não teve a certeza de que você deseja utilizar os nomes das colunas para nomear, então preferiu apenas utilizar os argumentos que você passou como nome dos eixos (cars$speed, por exemplo).
 
 - Class: text
-  Output: Provavelmente, faz mais sentido ter a velocidade dos carros no eixo x, já que a distância de freagem é uma variável em função da velocidade (quanto maior a velocidade, mais espaço o carro precisará para parar completamente) e não o contrário.
+  Output: Provavelmente, faz mais sentido ter a velocidade dos carros no eixo x, já que a distância de frenagem é uma variável em função da velocidade (quanto maior a velocidade, mais espaço o carro precisará para parar completamente) e não o contrário.
 
 - Class: text
   Output: 'Há outras maneiras de utilizar o comando de plot, utilizando uma "fórmula", por exemplo: plot(dist ~ speed, cars). No entanto, ainda não iremos utilizar esta forma. Primeiro, vamos explorar os argumentos opcionas da função.'
