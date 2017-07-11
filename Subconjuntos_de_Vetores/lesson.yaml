@@ -37,7 +37,7 @@
   Output: O que você imagina que x[is.na(x)] retorne?
   AnswerChoices: Um vetor com todos os NAs; Um vetor sem NAs; Um vetor de TRUEs e FALSEs; Um vetor de tamanho 0
   CorrectAnswer: Um vetor com todos os NAs
-  AnswerTests: omnitest(correctVal="Um vetor com todos os NAs")
+  AnswerTests: omnitest(correctVal='Um vetor com todos os NAs')
   Hint: Lembre-se que is.na(x) retorna em qual posição NA se encontra dentro do vetor. Então se estabelecermos um subconjunto de x, o que você espera que aconteça?
 
 - Class: cmd_question
