@@ -84,7 +84,7 @@
   Output: Como NA não é um valor, mas sim um espaço reservado para uma quantidade desconhecida, a expressão NA > 0 avalia para NA. Por isso, conseguimos um monte de NAs misturados com nossos números positivos quando fazemos isso.
 
 - Class: cmd_question
-  Output: Combinando o nosso conhecimento de operadores lógicos com o de subconjuntos, nós podemos fazer assim -- x[!is.na(x) & x > 0]. Tente.
+  Output: Combinando o nosso conhecimento de operadores lógicos com o de subconjuntos, nós podemos fazer assim x[!is.na(x) & x > 0]. Tente.
   CorrectAnswer: x[!is.na(x) & x > 0]
   AnswerTests: omnitest(correctExpr='x[!is.na(x) & x > 0]')
   Hint: Digite x[!is.na(x) & x > 0] para ver o que retorna.
