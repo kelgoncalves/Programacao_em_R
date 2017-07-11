@@ -165,7 +165,7 @@
   Output: Antes de concluir esta lição, gosteríamos de te mostrar alguns truques que vão te fazer economizar tempo.
 
 - Class: text
-  Output: Earlier in the lesson, you computed z * 2 + 100. Let's pretend that you made a mistake and that you meant to add 1000 instead of 100. You could either re-type the expression, or...
+  Output: Anteriormente nesta lição, você computou z * 2 + 100. Vamos imaginar que você cometeu um erro e que você queria adicionar 1000 ao invés de 100. Você poderia resolver isso  re-digitando a expressão ou...
 
 - Class: cmd_question
   Output: Em diversos ambientes de programação, a seta para cima te permitirá navegar pelos comandos anteriores que já foram feitos por voce. Pressione a seta para cima até encontrar este comando (z * 2 + 100), e então, mude 100 para 1000 e pressione Enter. Se a tecla da seta não funcionar para você, apenas digite o comando correto.
