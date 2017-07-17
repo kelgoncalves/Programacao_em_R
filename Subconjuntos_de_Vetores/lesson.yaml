@@ -96,7 +96,7 @@
   Output: Nós já mostramos para você como construir um subconjunto apenas com os primeiros dez elementos x[1:10]. Nesse caso, nós estamos providenciando um vetor de elementos positivos inteiros dentro dos colchetes, que informa ao R para retornar apenas os elementos de x numerados de 1 a 10.  
 
 - Class: text
-  Output: Muitas linguagens de programação usam o que chamamos de 'indexação baseada em zero', que significa que o primeiro elememento de um vetor é considerado elemento 0. O R utiliza a 'indexação baseada em zero', que (você adivinhou!) significa que o primeiro elemento de um vetor é considerado 1.
+  Output: Muitas linguagens de programação usam o que chamamos de 'indexação baseada em zero', que significa que o primeiro elememento de um vetor é considerado elemento 0. O R utiliza a 'indexação baseada em um', que (você adivinhou!) significa que o primeiro elemento de um vetor é considerado 1.
 
 - Class: cmd_question
   Output: Você consegue imaginar como seria um subconjunto com o 3º, o 5º e o 7º elementos de x? Sugestão -- Use a função c() para especificar o número de elementos do vetor numérico.
