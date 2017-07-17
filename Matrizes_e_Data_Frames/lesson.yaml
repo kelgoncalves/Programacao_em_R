@@ -163,7 +163,7 @@
   Hint: Certifique-se que os nomes estão todos em letra minúscula, entre aspas, separados com vírgulas. Não esqueça de usar a função c().
 
 - Class: cmd_question
-  Output: Agora, use a função colnames() para designar o atributo `colnames` (nomes de colunas) no nosso data frame. Isso é simialr à forma que usamos a função dim() antes nessa lição.
+  Output: Agora, use a função colnames() para designar o atributo `colnames` (nomes de colunas) no nosso data frame. Isso é similar à forma que usamos a função dim() antes nessa lição.
   CorrectAnswer: colnames(meus_dados) <- cnomes
   AnswerTests: omnitest(correctExpr='colnames(meus_dados) <- cnomes')
   Hint: Try colnames(meus_dados) <- cnomes.
