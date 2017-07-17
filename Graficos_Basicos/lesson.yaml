@@ -61,7 +61,7 @@
   Hint: Digite ?plot ou help(plot) para visualizar a página de ajuda de plot().
 
 - Class: text
-  Output: O help de plot() mostra os argumentos necessários que a função recebe para funcionar, sendo que há argumentos obrigatórios (sem os quais a função não funciona) e os opcionais (geramente relacionados com personalização). Os argumentos mais importantes da função plot são x e y, que correspondem às variáveis a serem plotadas (no teu caso, x é speed e y é dist), the variables that will be plotted. 
+  Output: O help de plot() mostra os argumentos necessários que a função recebe para funcionar, sendo que há argumentos obrigatórios (sem os quais a função não funciona) e os opcionais (geramente relacionados com personalização). Os argumentos mais importantes da função plot são x e y, que correspondem às variáveis a serem plotadas (no teu caso, x é speed e y é dist). 
 
 - Class: text
   Output: 'Para as próximas questões, vamos especificar na função os nomes dos argumentos que vão receber as variáveis a serem plotadas, ou seja, ao invés de digitar plot(cars) ou plot(cars$speed, cars$dist) que também funcionam, vamos usar: plot(x = cars$speed, y = cars$dist).'
