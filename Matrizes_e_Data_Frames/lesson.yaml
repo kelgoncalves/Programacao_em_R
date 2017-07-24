@@ -90,7 +90,7 @@
 - Class: cmd_question
   Output: Agora, olhe a documentação para a função matrix() e veja se você consegue entender como criar uma matriz contendo os mesmos números (de 1 a 20) e dimensões (4 linhas, 5 colunas) chamando a função matrix(). Guarde o resultado em uma variável chamada outra_matriz.
   CorrectAnswer: outra_matriz <- matrix(1:20, nrow=4, ncol=5)
-  AnswerTests: calculates_same_value('matrix(1:20, nrow=4, ncol=5)')
+  AnswerTests: omnitest(correctExpr='outra_matriz <- matrix(1:20, nrow=4, ncol=5)')
   Hint: Chame a função matrix() com três argumentos – 1:20, o número de linhas e o número de colunas. Cuide para especificar argumentos com seus nomes corretos e armazenar o resultado em outra_matriz (não minha_matriz).
 
 - Class: cmd_question
