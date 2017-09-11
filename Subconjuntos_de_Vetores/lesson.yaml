@@ -96,7 +96,7 @@
   Output: Nós já mostramos para você como construir um subconjunto apenas com os primeiros dez elementos x[1:10]. Nesse caso, nós estamos providenciando um vetor de elementos positivos inteiros dentro dos colchetes, que informa ao R para retornar apenas os elementos de x numerados de 1 a 10.  
 
 - Class: text
-  Output: Muitas linguagens de programação usam o que chamamos de 'indexação baseada em zero', que significa que o primeiro elememento de um vetor é considerado elemento 0. O R utiliza a 'indexação baseada em um', que (você adivinhou!) significa que o primeiro elemento de um vetor é considerado 1.
+  Output: Muitas linguagens de programação usam o que chamamos de 'indexação baseada em zero', que significa que o primeiro elemento de um vetor é considerado elemento 0. O R utiliza a 'indexação baseada em um', que (você adivinhou!) significa que o primeiro elemento de um vetor é considerado 1.
 
 - Class: cmd_question
   Output: Você consegue imaginar como seria um subconjunto com o 3º, o 5º e o 7º elementos de x? Sugestão -- Use a função c() para especificar o número de elementos do vetor numérico.
@@ -108,7 +108,7 @@
   Output: É importante que quando utilizar valores inteiros no subconjunto do nosso vetor x, Nós ficamos com conjuntos de índices {1, 2, ..., 40} desde que x tenha somente 40 elementos. O que acontece se nós perguntarmos para o elemento na posição 0 de x (por exemplo x[0])? Tente para ver.
   CorrectAnswer: x[0]
   AnswerTests: omnitest(correctExpr='x[0]')
-  Hint: Digite x[0] para ver o que aocntece quando nós nos referimos ao elemento na posição zero do vetor, como não é determinado em R.
+  Hint: Digite x[0] para ver o que acontece quando nós nos referimos ao elemento na posição zero do vetor, como não é determinado em R.
 
 - Class: cmd_question
   Output: Como você deve estar esperando, não retorna nada útil. Infelizmente, o R não prevê essa utilização. E se pedirmos o 3000º elemento de x? Tente.
