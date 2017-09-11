@@ -1,6 +1,6 @@
 notify <- function() {
   e <- get("e", parent.frame())
-  if(e$val == "Não") return(TRUE)
+  if(e$val == "Não") return(FALSE)
   
   good <- FALSE
   while(!good) {
