@@ -176,10 +176,3 @@
 
 - Class: text
   Output: Nessa lição, você aprendeu o básico sobre trabalhar com duas formas muito importantes e comuns de dados -- matrizes e data frames. Há muito mais para aprender e vamos cobrir tópicos mais avançados, particularmente com respeito a data frames, em lições futuras.
-
-- Class: mult_question
-  Output: Você gostaria de informar alguém sobre seu sucesso em completar essa lição?
-  CorrectAnswer: NULL
-  AnswerChoices: Sim; Não
-  AnswerTests: notify()
-  Hint: NULL
