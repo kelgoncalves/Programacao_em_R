@@ -158,7 +158,7 @@
 - Class: cmd_question
   Output: Tente c(1, 2, 3, 4) + c(0, 10, 100) por exemplo.
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10, 100)
-  AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
+  AnswerTests: suppressWarnings(omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)'))
   Hint: Digite c(1, 2, 3, 4) + c(0, 10, 100) para ver como que o R irá lidar com a soma de dois vetores, sendo que o tamanho do vetor menor não é divisível pelo tamanho do vetor maior. Não se preocupe em atribuir o resultado a uma variável.
 
 - Class: text
