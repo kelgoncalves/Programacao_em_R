@@ -192,10 +192,3 @@
 
 - Class: text
   Output: Nessa lição, você aprendeu a como utilizar funções básicas para criação de gráficos em R, mas ainda há muito mais a ser explorado. O melhor jeito de continuar aprendendo é utilizando novos pacotes.
-
-- Class: mult_question
-  Output: Você gostaria de informar alguém sobre o teu sucesso em completar esta lição?
-  CorrectAnswer: NULL
-  AnswerChoices: Sim; Não
-  AnswerTests: notify()
-  Hint: NULL
