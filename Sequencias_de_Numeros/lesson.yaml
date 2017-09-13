@@ -1,0 +1,118 @@
+- Class: meta
+  Course: Programação em R
+  Lesson: Sequências de Números
+  Author: Nick Carchedi, Kelin Gonçalves de Oliveira (tradução)
+  Type: Standard
+  Organization: JHU Biostat
+  Version: 2.2.0
+
+- Class: text
+  Output: Nesta lição, você aprenderá a criar sequeências de números no R.
+
+- Class: cmd_question
+  Output: A maneira mais simples de criar uma sequência de números no R é usando o operador `:`. Digite 1:20 para ver como ele funciona.
+  CorrectAnswer: '1:20'
+  AnswerTests: omnitest(correctExpr='1:20')
+  Hint: Digite 1:20 sem espaços entre os elementos. Tenha certeza de que você utilizou dois pontos e não um ponto e vírgula.
+
+- Class: cmd_question
+  Output: O comando anterior nos deu todos os números inteiros de 1 até 20 (incluindo o 20). Nós podemos utilizar os dois pontos para criar uma sequência de números reais também. Por exemplo, tente pi:10.
+  CorrectAnswer: pi:10
+  AnswerTests: omnitest(correctExpr='pi:10')
+  Hint: Digite pi:10 e veja o que acontece. pi é uma constante pré definida no R que contém o valor 3.1415....
+
+- Class: text
+  Output: O resultado foi um vetor de números reais começando com pi (3.142...) e aumentando de 1 em 1. Note que o limite máximo de 10 nunca será alcançado, já que o próximo número da sequência seria maior que 10 (10.141593...).
+
+- Class: cmd_question
+  Output: 'O que aconteceria se você digitasse 15:1? Vamos ver.'
+  CorrectAnswer: '15:1'
+  AnswerTests: omnitest(correctExpr='15:1')
+  Hint: Digite 15:1 e pressione Enter.
+
+- Class: text
+  Output: Olha! O vetor foi apresentado de modo decrescente, diminuindo de 1 em 1. É pouco provável que você vá utilizar este tipo de sequência, mas é bom saber que é possível de ser feito em R.
+
+- Class: text
+  Output: "Lembre-se que se você tiver dúvidas em relação a uma função particular no R, você pode acessar a documentação da função ao digitar um ponto de interrogação seguido pelo nome da função, por exemplo: ?paste. No entanto, se você tiver dúvida no uso de um operador, você deve envolver ele entre duas crases (`) ou aspas simples (') para conseguir acessar a documentação, por exemplo: ?`:` ou ?':'." 
+
+- Class: cmd_question
+  Output: Veja a documentação para os dois pontos.
+  CorrectAnswer: ?`:`
+  AnswerTests: ANY_of_exprs('?`:`', "?':'", '?":"')
+  Hint: "Para ver a documentação de símbolos, utilize a crase ou aspas simples envolvendo o símbolo após o ponto de interrogação. Digite: ?`:`"
+
+- Class: text
+  Output: Geralmente, nós desejamos ter mais controle sobre a sequência que estamos criando, por isso utilizamos a função seq() function.
+
+- Class: cmd_question
+  Output: O modo de uso mais básico de seq() faz a mesma coisa que o operador `:` faz. Teste seq(1, 20) para ver.
+  CorrectAnswer: seq(1, 20)
+  AnswerTests: omnitest(correctExpr='seq(1, 20)')
+  Hint: Digite seq(1, 20) e pressione Enter. O espaço após a vírgula não é necessário, mas é recomendado para tornar o código mais legível.
+
+- Class: cmd_question
+  Output: O comando nos deu o mesmo resultado que 1:20. No entanto, vaos supor que queremos um vetor que vá de 0 a 10 ao passo de 0.5 a 0.5. O comando seq(0, 10, by=0.5) fará justamente isso. Veja.
+  CorrectAnswer: seq(0, 10, by=0.5)
+  AnswerTests: omnitest(correctExpr='seq(0, 10, by=0.5)')
+  Hint: Você ainda usará a função seq(), mas desta vez com um argumento extre que dirá ao R que a incrementação da sequência acontecerá de 0.5 em 0.5. Digite seq(0, 10, by=0.5).
+
+- Class: cmd_question
+  Output: Talvez você não queira definir a incrementação, mas sim o tamanho da sequência ao longo de um intervalo, uma sequência de 30 números entre 5 e 10, por exemplo. Para isso, o comando seq(5, 10, length=30) funcionará perfeitamente. Rode o comando e guarde o resultado em uma variável chamada minha_seq.
+  CorrectAnswer: minha_seq <- seq(5, 10, length=30)
+  AnswerTests: omnitest(correctExpr='minha_seq <- seq(5, 10, length=30)')
+  Hint: 'Você continuará utilizando a mesma função neste exercício, mas alterará o argumento para obter diferentes resultados. Tenha certeza de que você guardou o resultado em uma nova variável chamada minha_seq, assim: minha_seq <- seq(5, 10, length=30).'
+
+- Class: cmd_question
+  Output: Para confirmar que minha_seq tem tamanho 30, podemos utilizar a função length(). Tente agora.
+  CorrectAnswer: length(minha_seq)
+  AnswerTests: omnitest(correctExpr='length(minha_seq)')
+  Hint: Utilize length(minha_seq) para ver o tamanho da variável minha_seq.
+
+- Class: text
+  Output: Vamos imaginar que não queremos saber o tamanho da variável minha_seq, mas queremos criar uma sequência de números inteiros que vai de 1 até N, onde N representa o tamanho do vetor minha_seq. Em outras palavras, desejamos um novo vetor (1, 2, 3, ...) que tem o mesmo tamanho que minha_seq.
+
+- Class: cmd_question
+  Output: 'Há várias maneiras pela qual podemos fazer isso. Uma das possibilidades é combinar o operador `:` e a função length() desta maneira: 1:length(minha_seq). Tente fazer isso.'
+ CorrectAnswer: 1:length(minha_seq)
+  AnswerTests: omnitest(correctExpr='1:length(minha_seq)')
+  Hint: Digite 1:length(minha_seq), SEM atribuir o resultado a uma nova variável.
+
+- Class: cmd_question
+  Output: Outra opção é usar seq(along.with = minha_seq). Tente esta também.
+  CorrectAnswer: seq(along.with = minha_seq)
+  AnswerTests: omnitest(correctExpr='seq(along.with = minha_seq)')
+  Hint: Digite seq(along.with = minha_seq). Note que você está utilizando a mesma função seq(), mas com um argumento diferente chamado `along.with`. Isso diz ao R que você deseja uma sequência 'ao longo do'(along with) tamanho do vetor contido em minha_seq. Lembre-se que você pode digitar ?seq caso tenha dúvidas quanto ao uso da função seq().
+
+- Class: cmd_question
+  Output: No entanto, como é o caso para muitas tarefas comuns, o R tem uma função interna construída com o propósito de facilitar a construção do código, chamada seq_along(). Digite seq_along(minha_seq) para vê-la em ação.
+  CorrectAnswer: seq_along(minha_seq)
+  AnswerTests: omnitest(correctExpr='seq_along(minha_seq)')
+  Hint: A função seq_along() é uma variação da função seq(). Digite seq_along(minha_seq) para obter o mesmo resultado da função anterior.
+
+- Class: text
+  Output: Geralmente há diversas maneiras de resolver o mesmo problema, principalmente em linguagem R. As abordagens simples que envolvem menos digitação costumam ser as preferidas. A simplicidade também é importante para que o teu código fique legível, assim outras pessoas conseguem entender o que está acontecendo sem muita dificuldade.
+
+- Class: text
+  Output: Se o R já possui uma função interna para uma tarefa em particular, é bem provável que esta função já foi otimizada e é a sua melhor opção. Conforme você for adquirindo experiência em R avançado, você passará a desenvolver as tuas próprias funções para resolver problemas mais complicados caso não tenha melhores opções disponíveis. Nós iremos explorar o desenvolvimento de funções em lições futuras.
+
+- Class: text
+  Output: Outra função relacionada a criação de sequências de números é rep(), que significa replicar. Vamos ver como ela funciona.
+
+- Class: cmd_question
+  Output: Se estivermos interessados em criar um vetor que contenha 40 zeros, nós podemos utilizar rep(0, times = 40). Teste este comando.
+  CorrectAnswer: rep(0, times = 40)
+  AnswerTests: omnitest(correctExpr='rep(0, times = 40)')
+  Hint: Digite rep(0, times = 40) para criar um vetor contendo 40 zeros.
+
+- Class: cmd_question
+  Output: No caso que desejarmos um vetor que tenha 10 repetições do vetor (0, 1, 2), podemos fazer rep(c(0, 1, 2), times = 10). Digite este passo para ver.
+  CorrectAnswer: rep(c(0, 1, 2), times = 10)
+  AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), times = 10)')
+  Hint: Digite rep(c(0, 1, 2), times = 10) para criar um vetor diferente utilizando a mesma função do exercício anterior. Lembre-se de utilizar a função c() para dizer ao R que os números 0, 1, and 2 fazem parte de um vetor menor a ser repetido.
+
+- Class: cmd_question
+  Output: Para finalizar esta lição, vamos supor que, ao invés de repetir o vetor (0, 1, 2) de novo e de novo, nós queremos que o nosso vetor de repetição contenha 10 zeros seguido de 10 números um, seguido de 10 números dois. Isso é possível utilizando o argumento `each`. Digite rep(c(0, 1, 2), each = 10).
+  CorrectAnswer: rep(c(0, 1, 2), each = 10)
+  AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), each = 10)')
+  Hint: Digite rep(c(0, 1, 2), each = 10) para ver como que o argumento `each` funciona dentro da função rep().
