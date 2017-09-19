@@ -74,7 +74,7 @@
 
 - Class: cmd_question
   Output: 'Há várias maneiras pela qual podemos fazer isso. Uma das possibilidades é combinar o operador `:` e a função length() desta maneira: 1:length(minha_seq). Tente fazer isso.'
- CorrectAnswer: 1:length(minha_seq)
+  CorrectAnswer: 1:length(minha_seq)
   AnswerTests: omnitest(correctExpr='1:length(minha_seq)')
   Hint: Digite 1:length(minha_seq), SEM atribuir o resultado a uma nova variável.
 
@@ -116,3 +116,4 @@
   CorrectAnswer: rep(c(0, 1, 2), each = 10)
   AnswerTests: omnitest(correctExpr='rep(c(0, 1, 2), each = 10)')
   Hint: Digite rep(c(0, 1, 2), each = 10) para ver como que o argumento `each` funciona dentro da função rep().
+
