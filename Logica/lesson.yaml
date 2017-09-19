@@ -52,7 +52,7 @@
   Hint: Use `<=` para avaliar se 10 <= 10
 
 - Class: text
-  Output: Tenha em mente que os operadores correspondentes existem e são: "maior que" (`>`) e "maior ou igual a" (`>=`).
+  Output: 'Tenha em mente que os operadores correspondentes existem e são: "maior que" (`>`) e "maior ou igual a" (`>=`).'
 
 - Class: mult_question
   Output: 'Quais das operações abaixo retornará FALSE?'
@@ -101,10 +101,10 @@
   Output: Em certos momentos é necessário avaliar as relações entre múltiplas expressões lógicas. Existem operadores E e OU para fazer isso.
 
 - Class: cmd_question
-  Output: Vamos olhar para como o operador E funciona. Existem dois operadores E em R, `&` e `&&`. Ambos funcionam de modo similar, avaliando se as expressões presentes a direita e esquerda dele são verdadeiras (TRUE), retornando TRUE se forem ou FALSE se não forem. Por exemplo, TRUE & TRUE resulta em TRUE. Digite FALSE & FALSE para ver qual será o resultado.
+  Output: 'Vamos olhar para como o operador E funciona. Existem dois operadores E em R, `&` e `&&`. Ambos funcionam de modo similar, avaliando se as expressões presentes a direita e esquerda dele são verdadeiras (TRUE), retornando TRUE se forem ou FALSE se não forem. Por exemplo, TRUE & TRUE resulta em TRUE. Digite FALSE & FALSE para ver qual será o resultado.'
   CorrectAnswer: FALSE & FALSE
   AnswerTests: omnitest(correctExpr='FALSE & FALSE')
-  Hint: "Para ilustrar como que o operador E funciona, digite FALSE & FALSE e veja o resultado".
+  Hint: 'Para ilustrar como que o operador E funciona, digite FALSE & FALSE e veja o resultado.'
 
 - Class: cmd_question
   Output: "Você pode usar o operador `&` para avaliar a expressão ao longo do vetor. O `&&` avalia apenas o primeiro membro de um vetor. Vamos testar ambos. Digite a expressão TRUE & c(TRUE, FALSE, FALSE)."
@@ -119,10 +119,10 @@
   Output: "Agora vamos fazer a mesma declaração, mas utilizando o operador `&&` operator. Digite a expressão TRUE && c(TRUE, FALSE, FALSE)."
   CorrectAnswer: "TRUE && c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE && c(TRUE, FALSE, FALSE)')
-  Hint: "Como você pode ver, a versão && do E funciona de modo diferente. Digite: TRUE && c(TRUE, FALSE, FALSE)"
+  Hint: 'Como você pode ver, a versão && do E funciona de modo diferente. Digite: TRUE && c(TRUE, FALSE, FALSE)'
 
 - Class: text
-  Output: "Neste caso, o operando a à esquerda tem apenas o teu primeiro membro avaliado em relação ao operando à direita. O restante dos elementos do vetor não são avaliados nesta expressão.
+  Output: 'Neste caso, o operando a à esquerda tem apenas o teu primeiro membro avaliado em relação ao operando à direita. O restante dos elementos do vetor não são avaliados nesta expressão.'
 
 - Class : text
   Output: O operador OU segue regras parecidas. A versão `|` do OU avalia o vetor por inteiro, enquanto que a versão `||` avalia apenas o primeiro elemento.
@@ -131,25 +131,25 @@
   Output: Uma expressão utilizando o operador OU resultará em TRUE caso o operando esquerdo ou o operando direito seja TRUE.Se ambos forem TRUE, o resultado geral será TRUE e se nenhum dos dois forem TRUE, então a expressão retornará FALSE.
 
 - Class: cmd_question
-  Output: "Vamos testar a versão vetorizada do operador OU. Digite a expressão TRUE | c(TRUE, FALSE, FALSE)."
+  Output: 'Vamos testar a versão vetorizada do operador OU. Digite a expressão TRUE | c(TRUE, FALSE, FALSE).'
   CorrectAnswer: "TRUE | c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE | c(TRUE, FALSE, FALSE)')
   Hint: "Teste o operador vetorizado OU digitando: TRUE | c(TRUE, FALSE, FALSE)"
 
 - Class: cmd_question
-  Output: "Vamos testar agora a versão não vetorizada do operador OU. Digite a expressão TRUE || c(TRUE, FALSE, FALSE)."
+  Output: 'Vamos testar agora a versão não vetorizada do operador OU. Digite a expressão TRUE || c(TRUE, FALSE, FALSE).'
   CorrectAnswer: "TRUE || c(TRUE, FALSE, FALSE)"
   AnswerTests: omnitest(correctExpr='TRUE || c(TRUE, FALSE, FALSE)')
-  Hint: "Como você verá, a versão || do OU não é vetorizada. Digite: TRUE || c(TRUE, FALSE, FALSE)"
+  Hint: 'Como você verá, a versão || do OU não é vetorizada. Digite: TRUE || c(TRUE, FALSE, FALSE)'
 
 - Class : text
   Output: "Operadores lógicos podem ser encadenados assim como operadores aritméticos. Expressões como: `6 != 10 && FALSE && 1 >= 2` or `TRUE || 5 < 9.3 || FALSE` são comuns de serem vistas."
 
 - Class : cmd_question
-  Output: "Você deve lembrar que operações aritméticas seguem uma ordem de execução. Operações lógicas também seguem. Todos os operadores E são avaliados ANTES dos operadores OU. Vamos dar uma olhada em um exemplo ambíguo. Digite: 5 > 8 || 6 != 8 && 4 > 3.9"
-  CorrectAnswer: "5 > 8 || 6 != 8 && 4 > 3.9"
+  Output: 'Você deve lembrar que operações aritméticas seguem uma ordem de execução. Operações lógicas também seguem. Todos os operadores E são avaliados ANTES dos operadores OU. Vamos dar uma olhada em um exemplo ambíguo. Digite: 5 > 8 || 6 != 8 && 4 > 3.9'
+  CorrectAnswer: 5 > 8 || 6 != 8 && 4 > 3.9
   AnswerTests: omnitest(correctExpr='5 > 8 || 6 != 8 && 4 > 3.9')
-  Hint: "Veja como funciona a ordem de operação digitando: 5 > 8 || 6 != 8 && 4 > 3.9"
+  Hint: 'Veja como funciona a ordem de operação digitando: 5 > 8 || 6 != 8 && 4 > 3.9'
 
 - Class : text
   Output: "Vamos examinar a ordem dos aperadores do exemplo anterior. Primeiro, os operandos à direita e esquerda do operador E devem ser resolvidos. 6 não é igual a 8 e 4 é maior que 3.9, portanto, ambos os operandos são TRUE. A declaração que sobra é `TRUE && TRUE` que resulta em TRUE. Depois, o operando a esquerda do operador OU é avaliado: 5 nao é maior que 8, então a expressão inteita é reduzida para FALSE || TRUE. Como um dos lados do operador é TRUE, a expressão resulta em TRUE."
@@ -270,5 +270,5 @@
   Hint: "any() resultará em TRUE se houver um ou mais elementos TRUE no vetor lógico."
 
 - Class : text
-  Output: "Isso é tudo para esta aula de introdução à lógica no R. Se você quiser aprofundar os conhecimentos, veja a lição de controle de fluxo.
-  
+  Output: 'Isso é tudo para esta aula de introdução à lógica no R. Se você quiser aprofundar os conhecimentos, veja a lição de controle de fluxo.'
+ 
