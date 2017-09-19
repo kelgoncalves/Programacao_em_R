@@ -52,8 +52,8 @@
   Hint: Digite y <- x - 3 e pressione Enter. Se você usa x - 3 ou x-3 é uma preferência pessoal, mas é um bom hábito incluir espaços em cada lado do operador de associação.
 
 - Class: cmd_question
-  Output: 'Qual é o valor de y? Digite y para descobrir.'
-  CorrectAnswer: y
+  Output: Qual é o valor de y? Digite y para descobrir.
+  CorrectAnswer: 'y'
   AnswerTests: omnitest(correctExpr='y')
   Hint: Digite y e pressione Enter.
 
@@ -181,10 +181,3 @@
   CorrectAnswer: minha_div
   AnswerTests: omnitest(correctExpr='minha_div')
   Hint: Se o teu ambiente não te permite auto-completar, digite minha_div e aperte Enter para prosseguir.
-  
-- Class: cmd_question
-  Output: Parabéns por completar a lição. Antes de terminar, copie e cole o comando options(warn=0) para retornar algumas configurações que foram automaticamente desativadas para esta lição.
-  CorrectAnswer: options(warn=0)
-  AnswerTests: omnitest(correctExpr='options(warn=0)')
-  Hint: Copie e cole options(warn=0) para terminar a lição
-
